@@ -4,135 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herrmann Heizung-Sanitär GmbH | Ihr Fachbetrieb in Hanhofen</title>
-    <meta name="description" content="Herrmann Heizung-Sanitär GmbH - Ihr kompetenter Partner für Sanitär, Bad und Heizung in Hanhofen. Wir planen Ihr Bad kostenlos! Tel: 06344/9698120">
+    <meta name="description" content="Herrmann Heizung-Sanitär GmbH - Ihr kompetenter Partner für Sanitär, Bad und Heizung in Hanhofen. Wir planen Ihr Bad kostenlos!">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
-        .gradient-hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%); }
-        .whatsapp-pulse { animation: pulse-green 2s infinite; }
+        .gradient-hero { 
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%); 
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+        }
+        .whatsapp-pulse { 
+            animation: pulse-green 2s infinite; 
+        }
         @keyframes pulse-green {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
 <body class="bg-gray-50">
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <i class="fas fa-faucet-drip text-3xl text-blue-600"></i>
-                <div>
-                    <h1 class="text-xl font-bold text-gray-900">Herrmann Heizung-Sanitär</h1>
-                    <p class="text-xs text-gray-500">GmbH - Ihr Fachbetrieb in Hanhofen</p>
+    <nav class="fixed w-full z-50 glass-effect shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-faucet-drip text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">Herrmann Heizung-Sanitär</h1>
+                        <p class="text-xs text-gray-500">GmbH - Ihr Fachbetrieb in Hanhofen</p>
+                    </div>
                 </div>
+                <a href="tel:063449698120" class="hidden md:flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+                    <i class="fas fa-phone"></i>
+                    <span>06344 / 96 98 120</span>
+                </a>
             </div>
-            <a href="tel:063449698120" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition flex items-center gap-2">
-                <i class="fas fa-phone"></i>
-                <span class="hidden sm:inline">06344 / 96 98 120</span>
-            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="gradient-hero text-white pt-32 pb-20">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl">
-                <span class="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                    🏆 Über 20 Jahre Erfahrung
+    <section class="gradient-hero text-white pt-32 pb-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <span class="inline-block bg-white/10 backdrop-blur text-yellow-300 px-6 py-2 rounded-full text-sm font-semibold mb-6 border border-white/20">
+                    Über 20 Jahre Erfahrung in der Pfalz
                 </span>
-                <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                    Ihr Bad verdient <span class="text-yellow-300">Professionals</span>
+                <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Ihr Bad verdient <span class="gradient-text">Professionals</span>
                 </h2>
-                <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                <p class="text-xl md:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed">
                     Die Herrmann Heizung-Sanitär GmbH bietet Ihnen kompetenten Service rund um Sanitär, Bad und Heizung in Hanhofen und Umgebung.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="tel:063449698120" class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition text-center flex items-center justify-center gap-2">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:063449698120" class="btn-primary text-gray-900 px-10 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3">
                         <i class="fas fa-phone-alt"></i>
                         Jetzt anrufen
                     </a>
-                    <a href="https://wa.me/4963449698120" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-900 transition text-center flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/4963449698120" class="border-2 border-white/50 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-900 transition flex items-center justify-center gap-3">
+                        <i class="fab fa-whatsapp text-xl"></i>
                         WhatsApp
                     </a>
                 </div>
             </div>
         </div>
+        <!-- Decorative elements -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50 to-transparent"></div>
     </section>
 
-    <!-- Features -->
-    <section class="bg-white -mt-10 relative z-10">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-4">
-                <div class="bg-blue-50 p-6 rounded-xl text-center">
-                    <div class="text-4xl mb-3">🎨</div>
-                    <h3 class="font-bold text-gray-900 mb-1">Kostenlose Planung</h3>
-                    <p class="text-sm text-gray-600">Wir planen Ihr Traumbad gratis</p>
+    <!-- Features Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-drafting-compass text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Kostenlose Planung</h3>
+                    <p class="text-gray-600 text-sm">Wir planen Ihr Traumbad gratis</p>
                 </div>
-                <div class="bg-blue-50 p-6 rounded-xl text-center">
-                    <div class="text-4xl mb-3">⚡</div>
-                    <h3 class="font-bold text-gray-900 mb-1">24h Bereitschaft</h3>
-                    <p class="text-sm text-gray-600">Schnellhilfe bei Notfällen</p>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">24h Bereitschaft</h3>
+                    <p class="text-gray-600 text-sm">Schnellhilfe bei Notfällen</p>
                 </div>
-                <div class="bg-blue-50 p-6 rounded-xl text-center">
-                    <div class="text-4xl mb-3">🏅</div>
-                    <h3 class="font-bold text-gray-900 mb-1">20+ Jahre</h3>
-                    <p class="text-sm text-gray-600">Erfahrung & Qualität</p>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">20+ Jahre Erfahrung</h3>
+                    <p class="text-gray-600 text-sm">Qualität die überzeugt</p>
                 </div>
-                <div class="bg-blue-50 p-6 rounded-xl text-center">
-                    <div class="text-4xl mb-3">💎</div>
-                    <h3 class="font-bold text-gray-900 mb-1">Faire Preise</h3>
-                    <p class="text-sm text-gray-600">Transparent & verbindlich</p>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-gem text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Faire Preise</h3>
+                    <p class="text-gray-600 text-sm">Transparent & verbindlich</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
+    <!-- Services Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Unsere Leistungen</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Von der Planung bis zur Fertigstellung - wir sind Ihr kompetenter Partner für alle Sanitär- und Heizungsarbeiten</p>
+                <span class="text-blue-600 font-semibold tracking-wide uppercase text-sm">Unser Angebot</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">Unsere Leistungen</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Von der Planung bis zur Fertigstellung - wir sind Ihr kompetenter Partner für alle Sanitär- und Heizungsarbeiten</p>
             </div>
+            
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                        <i class="fas fa-bath text-6xl text-white"></i>
+                <!-- Service 1 -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden card-hover border border-gray-100">
+                    <div class="h-64 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center relative">
+                        <i class="fas fa-bath text-white text-7xl opacity-80"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Bäder & Komplettbads</h3>
-                        <p class="text-gray-600 mb-6">Vom kleinen Gäste-WC bis zum luxuriösen Wellnessbad - wir realisieren Ihre Träume. Inklusive kostenloser 3D-Planung.</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Vom kleinen Gäste-WC bis zum luxuriösen Wellnessbad - wir realisieren Ihre Träume. Inklusive kostenloser 3D-Planung und Beratung.</p>
+                        <ul class="space-y-2 mb-6 text-gray-600">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> Individuelle Badplanung</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> Komplettsanierung</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> Barrierefreie Bäder</li>
+                        </ul>
                         <a href="tel:063449698120" class="text-blue-600 font-semibold hover:text-blue-800 flex items-center gap-2">
                             Mehr erfahren <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
-                        <i class="fas fa-tools text-6xl text-white"></i>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden card-hover border border-gray-100">
+                    <div class="h-64 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center relative">
+                        <i class="fas fa-tools text-white text-7xl opacity-80"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Wartung & Reparatur</h3>
-                        <p class="text-gray-600 mb-6">Schnelle Hilfe bei Verstopfungen, Rohrbrüchen und allen Sanitär-Notfällen. Unser 24h-Bereitschaftsdienst ist für Sie da.</p>
-                        <a href="tel:063449698120" class="text-blue-600 font-semibold hover:text-blue-800 flex items-center gap-2">
+                        <p class="text-gray-600 mb-6 leading-relaxed">Schnelle Hilfe bei Verstopfungen, Rohrbrüchen und allen Sanitär-Notfällen. Unser 24h-Bereitschaftsdienst ist für Sie da.</p>
+                        <ul class="space-y-2 mb-6 text-gray-600">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500"></i> Rohrreinigung</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500"></i> Lecksuche & Reparatur</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500"></i> 24h Notdienst</li>
+                        </ul>
+                        <a href="tel:063449698120" class="text-orange-600 font-semibold hover:text-orange-800 flex items-center gap-2">
                             Mehr erfahren <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
-                        <i class="fas fa-fire text-6xl text-white"></i>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden card-hover border border-gray-100">
+                    <div class="h-64 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center relative">
+                        <i class="fas fa-fire text-white text-7xl opacity-80"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Heizungstechnik</h3>
-                        <p class="text-gray-600 mb-6">Installation, Wartung und Reparatur aller Heizungssysteme. Von der Gasheizung bis zur modernen Wärmepumpe.</p>
-                        <a href="tel:063449698120" class="text-blue-600 font-semibold hover:text-blue-800 flex items-center gap-2">
+                        <p class="text-gray-600 mb-6 leading-relaxed">Installation, Wartung und Reparatur aller Heizungssysteme. Von der Gasheizung bis zur modernen Wärmepumpe.</p>
+                        <ul class="space-y-2 mb-6 text-gray-600">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Heizungsinstallation</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Wärmepumpen</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Thermostat-Steuerung</li>
+                        </ul>
+                        <a href="tel:063449698120" class="text-green-600 font-semibold hover:text-green-800 flex items-center gap-2">
                             Mehr erfahren <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -142,82 +210,115 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Wir planen Ihr Bad kostenlos!</h2>
-            <p class="text-xl text-blue-100 mb-8">Vereinbaren Sie jetzt einen Termin für eine unverbindliche Beratung</p>
-            <a href="tel:063449698120" class="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition inline-flex items-center gap-3">
-                <i class="fas fa-phone"></i>
+    <section class="py-24 bg-gradient-to-r from-blue-600 via-blue-700 to-purple-700 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Wir planen Ihr Bad kostenlos!</h2>
+            <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">Vereinbaren Sie jetzt einen Termin für eine unverbindliche Beratung. Wir freuen uns auf Sie!</p>
+            <a href="tel:063449698120" class="inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition shadow-2xl">
+                <i class="fas fa-phone text-xl"></i>
                 06344 / 96 98 120
             </a>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kontaktieren Sie uns</h2>
-                <p class="text-gray-600">Wir freuen uns auf Ihre Anfrage</p>
+                <span class="text-blue-600 font-semibold tracking-wide uppercase text-sm">Kontakt</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">Kontaktieren Sie uns</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Wir freuen uns auf Ihre Anfrage. Schreiben Sie uns oder rufen Sie direkt an.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Herrmann Heizung-Sanitär GmbH</h3>
-                    <div class="space-y-4">
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Info -->
+                <div class="bg-white p-10 rounded-3xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                        <i class="fas fa-building text-blue-600"></i>
+                        Herrmann Heizung-Sanitär GmbH
+                    </h3>
+                    
+                    <div class="space-y-6">
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-map-marker-alt text-blue-600 text-xl mt-1"></i>
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                            </div>
                             <div>
                                 <p class="font-semibold text-gray-900">Adresse</p>
                                 <p class="text-gray-600">Alte Kirchstraße 20<br>67374 Hanhofen</p>
                             </div>
                         </div>
+                        
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-phone text-blue-600 text-xl mt-1"></i>
+                            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-green-600 text-xl"></i>
+                            </div>
                             <div>
                                 <p class="font-semibold text-gray-900">Telefon</p>
-                                <a href="tel:063449698120" class="text-gray-600 hover:text-blue-600">06344 / 96 98 120</a>
+                                <a href="tel:063449698120" class="text-gray-600 hover:text-blue-600 text-lg">06344 / 96 98 120</a>
                             </div>
                         </div>
+                        
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-fax text-blue-600 text-xl mt-1"></i>
+                            <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-fax text-gray-600 text-xl"></i>
+                            </div>
                             <div>
                                 <p class="font-semibold text-gray-900">Fax</p>
                                 <p class="text-gray-600">06344 / 96 98 121</p>
                             </div>
                         </div>
+                        
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-envelope text-blue-600 text-xl mt-1"></i>
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                            </div>
                             <div>
                                 <p class="font-semibold text-gray-900">E-Mail</p>
                                 <a href="mailto:info@herrmann-baeder.de" class="text-gray-600 hover:text-blue-600">info@herrmann-baeder.de</a>
                             </div>
                         </div>
                     </div>
-                    <a href="https://wa.me/4963449698120" class="mt-8 bg-green-500 text-white px-8 py-4 rounded-full font-bold inline-flex items-center gap-3 hover:bg-green-600 transition">
+                    
+                    <a href="https://wa.me/4963449698120" class="mt-8 w-full bg-green-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition flex items-center justify-center gap-3">
                         <i class="fab fa-whatsapp text-2xl"></i>
                         Per WhatsApp schreiben
                     </a>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Öffnungszeiten</h3>
-                    <div class="space-y-4">
+
+                <!-- Opening Hours -->
+                <div class="bg-white p-10 rounded-3xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                        <i class="fas fa-clock text-orange-600"></i>
+                        Öffnungszeiten
+                    </h3>
+                    
+                    <div class="space-y-6">
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-clock text-blue-600 text-xl mt-1"></i>
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-calendar-week text-blue-600 text-xl"></i>
+                            </div>
                             <div>
                                 <p class="font-semibold text-gray-900">Montag - Freitag</p>
-                                <p class="text-gray-600">08:00 - 17:00 Uhr</p>
+                                <p class="text-gray-600 text-lg">08:00 - 17:00 Uhr</p>
                             </div>
                         </div>
+                        
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-ambulance text-red-500 text-xl mt-1"></i>
+                            <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-ambulance text-red-600 text-xl"></i>
+                            </div>
                             <div>
                                 <p class="font-semibold text-gray-900">Bereitschaftsdienst</p>
-                                <p class="text-gray-600">24 Stunden / 7 Tage<br><span class="text-red-500 font-semibold">Rufen Sie uns an!</span></p>
+                                <p class="text-gray-600">24 Stunden / 7 Tage</p>
+                                <p class="text-red-600 font-bold mt-1">Rufen Sie uns an!</p>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-8 bg-blue-50 p-6 rounded-xl">
-                        <p class="text-blue-800 font-semibold mb-2">💡 Tipp</p>
+                    
+                    <div class="mt-8 p-6 bg-blue-50 rounded-xl border-l-4 border-blue-500">
+                        <p class="text-blue-800 font-semibold mb-1">Tipp</p>
                         <p class="text-blue-700">Nutzen Sie WhatsApp für schnelle Anfragen und Fotos Ihres Problems!</p>
                     </div>
                 </div>
@@ -226,15 +327,33 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2026 Herrmann Heizung-Sanitär GmbH | <a href="#" class="text-blue-400 hover:text-blue-300">Impressum</a> | <a href="#" class="text-blue-400 hover:text-blue-300">Datenschutz</a></p>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-faucet-drip text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold">Herrmann Heizung-Sanitär GmbH</p>
+                        <p class="text-gray-400 text-sm">Alte Kirchstraße 20, 67374 Hanhofen</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Impressum</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Datenschutz</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">AGB</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Herrmann Heizung-Sanitär GmbH. Alle Rechte vorbehalten.</p>
+            </div>
         </div>
     </footer>
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/4963449698120?text=Hallo%20Herrmann%20Heizung-Sanitär" 
-       class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg whatsapp-pulse hover:scale-110 transition z-50"
+       class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl whatsapp-pulse hover:scale-110 transition z-50"
        target="_blank"
        title="WhatsApp">
         <i class="fab fa-whatsapp"></i>
